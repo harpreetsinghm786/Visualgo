@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:background="@color/black_overlay"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome! to Visu"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAppearance="@style/collappsed_subtitle_text_appearence"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/blue"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Algo"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAppearance="@style/collappsed_subtitle_text_appearence"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"></TextView>
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        android:layout_marginBottom="20dp"
+        android:text="Choose your profile pic"
+        android:gravity="center"></TextView>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="30dp">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profilepic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/profile"
+            app:riv_border_color="@color/black_overlay"
+            app:riv_corner_radius="100dp" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|bottom"
+            >
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_camera_alt_black_24dp"
+                android:background="@drawable/d_active"
+                android:id="@+id/chooser"
+                android:padding="13sp"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+            </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/white"
+                android:hint="Enter Username"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColorHint="@color/grey"
+                android:id="@+id/username"
+                android:pointerIcon="alias"
+                android:inputType="textPersonName"
+                ></EditText>
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonlogin"
+            android:textColor="@color/white"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:id="@+id/next"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            ></Button>
+    </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/progressbar"></include>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    android:background="@color/black_overlay">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:src="@mipmap/login"></ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login with Mobile Number"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textAppearance="@style/collappsed_subtitle_text_appearence"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/blue"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter your mobile number and we will send \n you OTP to verify."
+            android:gravity="center"
+            android:textSize="13dp"
+            android:textColor="@color/grey"
+            android:layout_marginTop="10sp"
+            ></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/cpp"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    app:ccpDialog_backgroundColor="@color/white"
+                    android:layout_marginTop="2sp"
+                    app:ccp_contentColor="@color/white"></com.hbb20.CountryCodePicker>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:hint="Enter Phone Number"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/grey"
+                    android:id="@+id/phone_number"
+                    android:pointerIcon="alias"
+                    android:inputType="number"
+                    ></EditText>
+
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonlogin"
+                android:textColor="@color/white"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/next"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="70dp"
+                android:layout_centerHorizontal="true"
+                ></Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

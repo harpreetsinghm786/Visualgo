@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/logo_plate"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title=" ">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    ></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/logo"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Visu"
+                            android:textColor="@color/white"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="algo"
+                            android:textColor="@color/blue"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profileactivity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/profile"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_margin="10sp"
+                        app:riv_corner_radius="30dp">
+
+
+                    </com.makeramen.roundedimageview.RoundedImageView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    ></LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/topbar"
+            android:orientation="vertical"
+            >
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:padding="10dp"
+                            android:drawableLeft="@drawable/ic_graphic_eq_black_24dp"
+                            android:text="Graphical Visualizer"
+                            android:textColor="@color/grey"
+                            android:drawableTint="@color/grey"
+                            android:drawablePadding="6dp"
+                            android:textSize="14sp"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/sorting"
+                            android:visibility="gone"
+                            android:gravity="center_vertical">
+
+                            <ProgressBar
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"></ProgressBar>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="Sorting..."
+                                android:textColor="@color/blue"
+                                android:textSize="12sp"></TextView>
+                        </LinearLayout>
+
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:background="@color/grey"></View>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="20dp"
+
+                            android:orientation="horizontal">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/graphpoints_vs_rv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/graph_vs_rv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+                        </LinearLayout>
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/graphbase"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/grey"></View>
+
+
+                        <TextView
+                            android:id="@+id/valuebars"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/grey"
+                            android:textSize="13sp"></TextView>
+                        </LinearLayout>
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:background="@color/black"
+                android:id="@+id/isempty"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:tint="@color/light_black_overlay"
+                    android:src="@drawable/ic_insert_chart_black_24dp"></ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:text="Sorting Graph will be shown here"
+                    android:textColor="@color/light_black_overlay"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true">
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                 >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/consolepalet"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="5.1"
+                    android:background="@drawable/logo_plate"
+                    android:backgroundTint="@color/black_overlay">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:paddingLeft="10dp"
+                    android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                    android:drawableTint="@color/blue"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="1dp"
+                    android:drawablePadding="5dp"
+                    android:background="@drawable/console_plate"
+                    android:backgroundTint="@color/black"
+                    android:text="Console Palate"
+                    android:textColor="@color/blue"
+                    android:textSize="13sp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="4.8"
+                    android:background="@drawable/logo_plate"
+                    android:backgroundTint="@color/black_overlay">
+                <ImageButton
+                    android:id="@+id/clear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:backgroundTint="@android:color/transparent"
+                    android:src="@drawable/ic_delete_black_24dp"
+                    android:tint="@color/blue"></ImageButton>
+
+                <ImageButton
+                    android:id="@+id/run"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:backgroundTint="@android:color/transparent"
+                    android:src="@drawable/ic_insert_chart_black_24dp"
+                    android:tint="@color/blue"></ImageButton>
+
+                <ImageButton
+                    android:id="@+id/sort"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:backgroundTint="@android:color/transparent"
+                    android:src="@drawable/ic_play_arrow_black_24dp"
+                    android:tint="@color/blue"></ImageButton>
+                <ImageButton
+                    android:id="@+id/minimize"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:backgroundTint="@android:color/transparent"
+                    android:src="@drawable/ic_indeterminate_check_box_black_24dp"
+                    android:tint="@color/blue"></ImageButton>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/inputpalet"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/black"></androidx.recyclerview.widget.RecyclerView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5sp"
+                    android:background="@color/blue"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black_overlay"
+                    android:background="@drawable/edit_text_background">
+
+                    <EditText
+                        android:id="@+id/input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="Enter Values seperated by comma"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/grey"
+                        android:textColorHint="@color/grey"
+                        android:textSize="14sp"></EditText>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/speed_control_box"
+                      android:padding="10dp"
+                      android:layout_marginLeft="2dp"
+                      android:visibility="gone"
+                      android:layout_marginRight="2dp"
+                      android:background="@drawable/edit_text_background"
+                      android:backgroundTint="@color/black_overlay"
+                      android:orientation="vertical">
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="13dp"
+                          android:text="Speed controller"
+                          android:textColor="@color/blue">
+                      </TextView>
+                      <SeekBar
+                          android:layout_width="match_parent"
+                          android:layout_height="25dp"
+                          android:layout_marginTop="10dp"
+                          android:indeterminateTint="@color/grey"
+                          android:progress="50"
+                          android:id="@+id/speed_controller"></SeekBar>
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/code_analysis_box"
+                      android:visibility="gone"
+                      android:background="@drawable/console_plate"
+                      android:orientation="vertical"
+                      >
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          >
+                          <TextView
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:text="Code Analysis"
+                              android:textColor="@color/blue"
+                              android:drawableLeft="@drawable/ic_code_black_24dp"
+                              android:drawableTint="@color/blue"
+                              android:drawablePadding="5dp"
+                              android:textSize="13sp"
+                              android:gravity="center_vertical"
+                              android:padding="10dp"></TextView>
+                      </LinearLayout>
+
+                      <androidx.recyclerview.widget.RecyclerView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@color/black"
+                          android:id="@+id/code_analysis_rv"
+                          android:paddingTop="10dp"
+                          ></androidx.recyclerview.widget.RecyclerView>
+
+                  </LinearLayout>
+              </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:background="@color/black"
+                    android:orientation="horizontal">
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/console"
+                            android:background="@drawable/console_plate"
+                            android:layout_marginLeft="2dp"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Console"
+                                android:drawableTint="@color/blue"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:textSize="13dp"
+                                android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                                android:textColor="@color/blue"></TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/speed"
+                            android:background="@drawable/console_plate"
+                            android:layout_marginLeft="2dp"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Speed"
+                                android:drawableTint="@color/blue"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:textSize="13dp"
+                                android:drawableLeft="@drawable/ic_directions_run_black_24dp"
+                                android:textColor="@color/blue"></TextView>
+                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/code_analysis"
+                                android:background="@drawable/console_plate"
+                                android:layout_marginLeft="2dp"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Code Analysis"
+                                    android:drawableTint="@color/blue"
+                                    android:drawablePadding="5dp"
+                                    android:gravity="center"
+                                    android:textSize="13dp"
+                                    android:drawableLeft="@drawable/ic_code_black_24dp"
+                                    android:textColor="@color/blue"></TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationview_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/black_overlay"
+        app:headerLayout="@layout/header"
+        app:itemIconTint="@color/grey"
+        app:itemTextColor="@color/grey"
+        app:menu="@menu/menu">
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

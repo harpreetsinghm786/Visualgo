@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.official.visualgo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="Visualgo"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <activity android:name=".test"
+            android:theme="@style/mytheme">
+
+        </activity>
+        <activity
+            android:name=".profile_editor"
+            android:theme="@style/mytheme" />
+        <activity
+            android:name=".profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/mytheme" />
+        <activity
+            android:name=".Verification"
+            android:screenOrientation="portrait"
+            android:theme="@style/mytheme" />
+        <activity
+            android:name=".login"
+            android:screenOrientation="portrait"
+            android:theme="@style/mytheme" />
+        <activity
+            android:name=".Introslides"
+            android:screenOrientation="portrait"
+            android:theme="@style/intro" />
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait"
+            android:theme="@style/mytheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/mytheme"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

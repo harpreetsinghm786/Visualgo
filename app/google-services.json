@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "885708032322",
+    "project_id": "visualgo-716db",
+    "storage_bucket": "visualgo-716db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885708032322:android:d12abfd3980f298dd660db",
+        "android_client_info": {
+          "package_name": "com.official.visualgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885708032322-e4jbnk4joua9sb64183ko70nk5m4g1ui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.official.visualgo",
+            "certificate_hash": "36165e422a7d63368c12bf6d80d0f1fa5a45fd43"
+          }
+        },
+        {
+          "client_id": "885708032322-lijpldqfjdgcnvkjqu3n9teb14g2l1o3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBscvbQ8Gkswsoju09SY0Dk2tp9dB4sUL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885708032322-lijpldqfjdgcnvkjqu3n9teb14g2l1o3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
